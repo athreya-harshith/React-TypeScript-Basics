@@ -1,20 +1,29 @@
+import { useState } from "react";
+
 // import { Fragment } from "react";
-import { MouseEvent } from "react";
-function ListGroup() {
-  let items = ["New York", "Virginia", "San Fransico", "Florida"];
-  //   items = [];
-  const handleClick = (event: MouseEvent) => {
-    console.log("Clicked the list item ");
-    console.log(event);
-  };
+interface Props {
+  items: string[];
+  heading: string;
+}
+function ListGroup({ items, heading }: Props) {
+  //Hook : functions that taps in to use of built in features of react
+  const [selectedIndex, setSelectedIndex] = useState(-1);
   return (
     <>
-      <h1>List Group</h1>
+      <h1>{heading}</h1>
       <ul className="list-group">
         {/* the below is the better way for conditional rendering */}
         {items.length === 0 && <p>No Items Found</p>}
-        {items.map((item) => (
-          <li key={item} className="list-group-item" onClick={handleClick}>
+        {items.map((item, index) => (
+          <li
+            key={item}
+            className={
+              selectedIndex === index
+                ? "list-group-item active"
+                : "list-group-item"
+            }
+            onClick={() => setSelectedIndex(index)}
+          >
             {item}
           </li>
         ))}
