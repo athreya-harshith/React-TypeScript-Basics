@@ -1,16 +1,25 @@
 // import { Fragment } from "react";
 function ListGroup() {
+  let items = ["New York", "Virginia", "San Fransico", "Florida"];
+  //   items = [];
+  if (items.length === 0)
+    return (
+      <>
+        <h1>List Group</h1>
+        <p>No Items found</p>
+      </>
+    );
   return (
     <>
       <h1>List Group</h1>
       <ul className="list-group">
-        <li className="list-group-item">An item</li>
-        <li className="list-group-item">A second item</li>
-        <li className="list-group-item">A third item</li>
-        <li className="list-group-item">A fourth item</li>
-        <li className="list-group-item">And a fifth one</li>
+        {items.map((item) => (
+          <li key={item} className="list-group-item">
+            {item}
+          </li>
+        ))}
       </ul>
-      </>
+    </>
   );
 }
 export default ListGroup;
