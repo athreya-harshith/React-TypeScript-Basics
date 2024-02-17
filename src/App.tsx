@@ -1,21 +1,16 @@
-// import ListGroup from "./components/ListGroup";
-import { useState } from "react";
-import Alert from "./components/Alert";
-import Button from "./components/Button";
+import ListGroup from "./components/ListGroup";
+// import { useState } from "react";
+// import Alert from "./components/Alert";
+// import Button from "./components/Button";
+
+import "./App.css";
 function App() {
   /* 1. ListGroup Component */
 
-  // let items = ["New York", "Virginia", "San Fransico", "Florida"];
-  // const handleSelectItem = (item: string) => {
-  //   console.log(item);
-  // };
-  /*
-    <ListGroup
-        items={items}
-        heading="List  Group"
-        onSelectItem={handleSelectItem}
-      />
-   */
+  let items = ["New York", "Virginia", "San Fransico", "Florida"];
+  const handleSelectItem = (item: string) => {
+    console.log(item);
+  };
 
   /*Alert Component */
   /**
@@ -23,10 +18,13 @@ function App() {
         <span>Hello World</span>
       </Alert>
    */
+
+  /*Dismissible alert 
   const [alertVisibility, setAlertVisibility] = useState(false);
-  return (
-    <div>
-      {alertVisibility && (
+
+
+  
+   {alertVisibility && (
         <Alert onClose={() => setAlertVisibility(false)}>
           <span>Showing the alert</span>
         </Alert>
@@ -40,6 +38,15 @@ function App() {
       >
         Sample Button
       </Button>
+   */
+
+  return (
+    <div>
+      <ListGroup
+        items={items}
+        heading="List  Group"
+        onSelectItem={handleSelectItem}
+      />
     </div>
   );
 }

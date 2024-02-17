@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 // import { Fragment } from "react";
+import styles from "./ListGroup.module.css";
 interface Props {
   items: string[];
   heading: string;
@@ -12,7 +13,7 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
   return (
     <>
       <h1>{heading}</h1>
-      <ul className="list-group">
+      <ul className={[styles.listGroup, styles.container].join(" ")}>
         {/* the below is the better way for conditional rendering */}
         {items.length === 0 && <p>No Items Found</p>}
         {items.map((item, index) => (
