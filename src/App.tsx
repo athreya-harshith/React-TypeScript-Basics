@@ -4,6 +4,7 @@ import ListGroup from "./components/ListGroup";
 // import Button from "./components/Button";
 
 import "./App.css";
+// import { FaCalendar } from "react-icons/fa";
 function App() {
   /* 1. ListGroup Component */
 
@@ -42,6 +43,7 @@ function App() {
 
   return (
     <div>
+      {/* <FaCalendar size="150px" /> */}
       <ListGroup
         items={items}
         heading="List  Group"
