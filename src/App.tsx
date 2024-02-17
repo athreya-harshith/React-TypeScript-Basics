@@ -1,5 +1,6 @@
 // import ListGroup from "./components/ListGroup";
-import Alert from "./components/Alert";
+// import Alert from "./components/Alert";
+import Button from "./components/Button";
 function App() {
   /* 1. ListGroup Component */
 
@@ -14,14 +15,18 @@ function App() {
         onSelectItem={handleSelectItem}
       />
    */
+
+  /*Alert Component */
+  /**
+    <Alert>
+        <span>Hello World</span>
+      </Alert>
+   */
   return (
     <div>
-      <Alert>
-        <span>Hello World</span>
-        <ul>
-          <li>this is one</li>
-        </ul>
-      </Alert>
+      <Button color="success" onClick={() => console.log("clicked")}>
+        Sample Button
+      </Button>
     </div>
   );
 }

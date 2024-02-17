@@ -5,6 +5,6 @@ interface Props {
   // HTML is not rendered
 }
 function Alert({ children }: Props) {
-  return <div>{children}</div>;
+  return <div className="alert alert-primary">{children}</div>;
 }
 export default Alert;
