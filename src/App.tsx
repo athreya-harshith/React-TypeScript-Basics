@@ -1,7 +1,7 @@
 import ListGroup from "./components/ListGroup";
 // import { useState } from "react";
 // import Alert from "./components/Alert";
-// import Button from "./components/Button";
+import Button from "./components/Button";
 
 import "./App.css";
 // import { FaCalendar } from "react-icons/fa";
@@ -49,6 +49,7 @@ function App() {
         heading="List  Group"
         onSelectItem={handleSelectItem}
       />
+      <Button>Sample </Button>
     </div>
   );
 }
