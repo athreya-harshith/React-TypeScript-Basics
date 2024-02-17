@@ -2,8 +2,8 @@ import ListGroup from "./components/ListGroup";
 // import { useState } from "react";
 // import Alert from "./components/Alert";
 import Button from "./components/Button";
-
 import "./App.css";
+import Like from "./components/Like";
 // import { FaCalendar } from "react-icons/fa";
 function App() {
   /* 1. ListGroup Component */
@@ -40,7 +40,10 @@ function App() {
         Sample Button
       </Button>
    */
-
+  /* For the Like component */
+  const likeHandler = () => {
+    console.log("Like button clicked");
+  };
   return (
     <div>
       {/* <FaCalendar size="150px" /> */}
@@ -50,6 +53,7 @@ function App() {
         onSelectItem={handleSelectItem}
       />
       <Button>Sample </Button>
+      <Like onClick={likeHandler} />
     </div>
   );
 }
