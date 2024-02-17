@@ -2,17 +2,12 @@
 function ListGroup() {
   let items = ["New York", "Virginia", "San Fransico", "Florida"];
   //   items = [];
-  if (items.length === 0)
-    return (
-      <>
-        <h1>List Group</h1>
-        <p>No Items found</p>
-      </>
-    );
   return (
     <>
       <h1>List Group</h1>
       <ul className="list-group">
+        {/* the below is the better way for conditional rendering */}
+        {items.length === 0 && <p>No Items Found</p>}
         {items.map((item) => (
           <li key={item} className="list-group-item">
             {item}
